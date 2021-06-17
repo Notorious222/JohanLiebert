@@ -7,39 +7,39 @@ from LightYagami.modules.sql import BASE, SESSION
 from sqlalchemy import (BigInteger, Boolean, Column, Integer, String,
                         UnicodeText)
 
-DEFAULT_WELCOME = 'Hey {first}, how are you?'
-DEFAULT_GOODBYE = 'Nice knowing ya!'
+DEFAULT_WELCOME = '{first}, the monster inside of me is exploding.'
+DEFAULT_GOODBYE = 'Why would you do this?I trusted you!'
 
 DEFAULT_WELCOME_MESSAGES = [
-    "{first} is here!",  #Discord welcome messages copied
-    "Ready player {first}",
-    "Genos, {first} is here.",
-    "A wild {first} appeared.",
-    "{first} came in like a Lion!",
-    "{first} has joined your party.",
-    "{first} just joined. Can I get a heal?",
-    "{first} just joined the chat - asdgfhak!",
-    "{first} just joined. Everyone, look busy!",
-    "Welcome, {first}. Stay awhile and listen.",
+    "Player to player, Whatup {first} !",  
+    "Ready Player {first}",
+    "{first},I'll play with your soul like ether.",
+    "I prove you lost already,{first} .",
+    "{first}, drop the heat on us!",
+    "{first} may have stories to tell.",
+    "{first} just joined. Can I get a Pat?",
+    "{first} just joined the chat - asweedasdf!",
+    "{first} PASS THAT.DON'T FORGET THE ROTATION!",
+    "{first},how many times should I tell you?Its PUFF-PUFF-PASS!",
     "Welcome, {first}. We were expecting you ( ͡° ͜ʖ ͡°)",
-    "Welcome, {first}. We hope you brought pizza.",
-    "Welcome, {first}. Leave your weapons by the door.",
-    "Swoooosh. {first} just landed.",
-    "Brace yourselves. {first} just joined the chat.",
-    "{first} just joined. Hide your bananas.",
-    "{first} just arrived. Seems OP - please nerf.",
-    "{first} just slid into the chat.",
-    "A {first} has spawned in the chat.",
-    "Big {first} showed up!",
-    "Where’s {first}? In the chat!",
-    "{first} hopped into the chat. Kangaroo!!",
+    "Welcome, {first}. We hope you brought some Brain cells with ya!",
+    "Hey Yo, {first}. This a no ammunition zone.",
+    "Call the cops when you see {first}.",
+    "Be ready for some shit. {first} is coming up to me.",
+    "{first},You got games on your Phone????.",
+    "{first} just arrived.What am gon' do now.",
+    "{first},tell me.How do you want it??.",
+    "{first}, Do you know what is One Piece?",
+    "Lil {first} showed up!",
+    "BIG {first} on a higher plane!",
+    "No matter where I go,I see the same {first}!",
     "{first} just showed up. Hold my beer.",
     "Challenger approaching! {first} has appeared!",
     "It's a bird! It's a plane! Nevermind, it's just {first}.",
-    "It's {first}! Praise the sun! \o/",
+    "God give me a sign...NVM {first} will do too.",
     "Never gonna give {first} up. Never gonna let {first} down.",
     "Ha! {first} has joined! You activated my trap card!",
-    "Hey! Listen! {first} has joined!",
+    "{first}.We all embrace you with napalm!",
     "We've been expecting you {first}",
     "It's dangerous to go alone, take {first}!",
     "{first} has joined the chat! It's super effective!",
@@ -52,47 +52,47 @@ DEFAULT_WELCOME_MESSAGES = [
     "Roses are red, violets are blue, {first} joined this chat with you",
     "Welcome {first}, Avoid Punches if you can!",
     "It's a bird! It's a plane! - Nope, its {first}!",
-    "{first} Joined! - Ok.",  #Discord welcome messages end.
-    "All Hail {first}!",
+    "{first},you shall maintain composure at ease.",  #Discord welcome messages end.
+    "Bungee gum has the property of both rubber and gum.Don't tell me you ain't knowing that {first}",
     "Hi, {first}. Don't lurk, only Villans do that.",
     "{first} has joined the battle bus.",
-    "A new Challenger enters!",  #Tekken
-    "Ok!",
-    "{first} just fell into the chat!",
+    "Don't like this complicated. Only what you're making to be!",  #Tekken
+    "{first},I am the controller of Planet X.You're here to discuss something very important!",
+    "{first},why are you alive at this hour??",
     "Something just fell from the sky! - oh, its {first}.",
-    "{first} Just teleported into the chat!",
+    "At last you're here {first}.You've been away longer than Sigmund The Sea Creature !",
     "Hi, {first}, show me your Hunter License!",  #Hunter Hunter
     "I'm looking for Garo, oh wait nvm it's {first}.",  #One Punch man s2
     "Welcome {first}, leaving is not an option!",
     "Run Forest! ..I mean...{first}.",
-    "{first} do 100 push-ups, 100 sit-ups, 100 squats, and 10km running EVERY SINGLE DAY!!!",  #One Punch ma
-    "Huh?\nDid someone with a disaster level just join?\nOh wait, it's just {first}.",  #One Punch ma 
-    "Hey, {first}, ever heard the King Engine?",  #One Punch ma
-    "Hey, {first}, empty your pockets.",
-    "Hey, {first}!, are you strong?",
+    "{first},its all about Romance!",  
+    "{first},Only God can Judge You.",  
+    "That would not kill you could only make you stronger {first}", 
+    "{first} what's all this Villainy??.",
+    "{first} is like, One more steps and you're all goners.",
     "Call the Avengers! - {first} just joined the chat.",
     "{first} joined. You must construct additional pylons.",
-    "Ermagherd. {first} is here.",
+    "{first} is here to tell us what the plan is.The hour is upon us its bananas.",
     "Come for the Snail Racing, Stay for the Chimichangas!",
     "Who needs Google? You're everything we were searching for.",
-    "This place must have free WiFi, cause I'm feeling a connection.",
-    "Speak friend and enter.",
-    "Welcome you are",
-    "Welcome {first}, your princess is in another castle.",
+    "Can anyone picture {first}'s specific plan.",
+    "Lets keep its real {first}.",
+    "I'm just a butter knife,{first}'s a machete.",
+    "{first},the Renowned Warrior,you're him right?",
     "Hi {first}, welcome to the dark side.",
     "Hola {first}, beware of people with disaster levels",
-    "Hey {first}, we have the droids you are looking for.",
+    "Hey {first}, we ain't got nothing to do with the bank robbery.",
     "Hi {first}\nThis isn't a strange place, this is my home, it's the people who are strange.",
-    "Oh, hey {first} what's the password?",
-    "Hey {first}, I know what we're gonna do today",
-    "{first} just joined, be at alert they could be a spy.",
+    "Oh, hey {first} stop setting your password to password",
+    "Hey {first}, so what we doin' today?",
+    "{first} just joined, be at alert they could be a NARC.Hide the dope",
     "{first} joined the group, read by Mark Zuckerberg, CIA and 35 others.",
-    "Welcome {first}, watch out for falling monkeys.",
+    "Welcome {first}, watch out for falling lumps of shit.",
     "Everyone stop what you’re doing, We are now in the presence of {first}.",
-    "Hey {first}, do you wanna know how I got these scars?",
+    "Hey You {first},listen,it's all about the scars",
     "Welcome {first}, drop your weapons and proceed to the spy scanner.",
     "Stay safe {first}, Keep 3 meters social distances between your messages.",  #Corona memes lmao
-    "Hey {first}, Do you know I once One-punched a meteorite?",
+    "Hey {first}, Do you know I once One-punched a meteorite(Why don't no one care.)?",
     "You’re here now {first}, Resistance is futile",
     "{first} just arrived, the force is strong with this one.",
     "{first} just joined on president’s orders.",
@@ -103,15 +103,15 @@ DEFAULT_WELCOME_MESSAGES = [
     "They may take our lives, but they’ll never take our {first}.",
     "Coast is clear! You can come out guys, it’s just {first}.",
     "Welcome {first}, pay no attention to that guy lurking.",
-    "Welcome {first}, may the force be with you.",
+    "{first} gon' give it to ya!",
     "May the {first} be with you.",
-    "{first} just joined. Hey, where's Perry?",
-    "{first} just joined. Oh, there you are, Perry.",
+    "{first} just joined. Hey, where's he tho?",
+    "{first} just joined. Oh, there he is.",
     "Ladies and gentlemen, I give you ...  {first}.",
     "Behold my new evil scheme, the {first}-Inator.",
     "Ah, {first} the Platypus, you're just in time... to be trapped.",
     "*snaps fingers and teleports {first} here*",
-    "{first}! What is a fish and a rabbit combined?",  #Lifereload - kaizoku member.
+    "La Di Da Di {first} likes to party!",
     "{first} just arrived. Diable Jamble!",  #One Piece Sanji
     "{first} just arrived. Aschente!",  #No Game No Life
     "{first} say Aschente to swear by the pledges.",  #No Game No Life
@@ -128,18 +128,18 @@ DEFAULT_WELCOME_MESSAGES = [
     "Hey {first}, are You Challenging Me?",  #Shaggy
     "Oh? You're Approaching Me?",  #jojo
     "{first} just warped into the group!",
-    "I..it's..it's just {first}.",
+    "The world's a cold place {first},don't forget your Sweater.",
     "Sugoi, Dekai. {first} Joined!",
     "{first}, do you know gods of death love apples?",  #Death Note owo
-    "I'll take a potato chip.... and eat it",  #Death Note owo
+    "{first} what's your favourite song?",  #Death Note owo
     "Oshiete oshiete yo sono shikumi wo!",  #Tokyo Ghoul
     "Kaizoku ou ni...nvm wrong anime.",  #op
     "{first} just joined! Gear.....second!",  #Op
     "Omae wa mou....shindeiru",
-    "Hey {first}, the leaf village lotus blooms twice!",  #Naruto stuff begins from here
-    "{first} Joined! Omote renge!",
-    "{first} joined!, Gate of Opening...open!",
-    "{first} joined!, Gate of Healing...open!",
+    "Enough {first}, Grandma Tsunade is too old for you!",  #Naruto stuff begins from here
+    "{first},Chunchunmaru!",
+    "{first},you ain't high right??!, ",
+    "{first}.I got 5 on it!",
     "{first} joined!, Gate of Life...open!",
     "{first} joined!, Gate of Pain...open!",
     "{first} joined!, Gate of Limit...open!",
@@ -147,11 +147,11 @@ DEFAULT_WELCOME_MESSAGES = [
     "{first} joined!, Gate of Shock...open!",
     "{first} joined!, Gate of Death...open!",
     "{first}! I, Madara! declare you the strongest",
-    "{first}, this time I'll lend you my power. ",  #Kyuubi to naruto
+    "{first}, Whatup Homes!?",  #Kyuubi to naruto
     "{first}, welcome to the hidden leaf village!",  # Naruto thingies end here
     "In the jungle, you must wait...until the dice read five or eight.",  #Jumanji stuff
-    "Dr.{first} Famed archeologist and international explorer,\nWelcome to Jumanji!\nJumanji's Fate is up to you now.",
-    "{first}, this will not be an easy mission - monkeys slow the expedition.",  #End of Jumanji stuff
+    "{first} got his mind in the right place.",
+    "{first},blows up, no guts, left chest, face gone ", 
 ]
 DEFAULT_GOODBYE_MESSAGES = [
     "{first} will be missed.",
